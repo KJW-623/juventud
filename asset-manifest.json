@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/juventud/static/css/main.f83e5f8a.css",
-    "main.js": "/juventud/static/js/main.785a9f98.js",
+    "main.js": "/juventud/static/js/main.5fa6a475.js",
     "static/js/453.5ccb6a28.chunk.js": "/juventud/static/js/453.5ccb6a28.chunk.js",
     "index.html": "/juventud/index.html",
     "main.f83e5f8a.css.map": "/juventud/static/css/main.f83e5f8a.css.map",
-    "main.785a9f98.js.map": "/juventud/static/js/main.785a9f98.js.map",
+    "main.5fa6a475.js.map": "/juventud/static/js/main.5fa6a475.js.map",
     "453.5ccb6a28.chunk.js.map": "/juventud/static/js/453.5ccb6a28.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f83e5f8a.css",
-    "static/js/main.785a9f98.js"
+    "static/js/main.5fa6a475.js"
   ]
 }
