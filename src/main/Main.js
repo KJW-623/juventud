@@ -1,13 +1,14 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Main.css";
 
 export default function Main() {
     const heroRef = useRef(null);
-
+    const navigate = useNavigate();
+    
     useEffect(() => {
         const el = heroRef.current;
         if (!el) return;
-        // 첫 프레임 이후 붙여 자연스러운 페이드
         const id = requestAnimationFrame(() => el.classList.add("is-mounted"));
         return () => cancelAnimationFrame(id);
     }, []);
@@ -29,9 +30,11 @@ export default function Main() {
                 <p className="hub-sub">우리는 또, 여기서 오늘.</p>
 
                 <div className="hub-grid">
-                    <a className="hub-card hub-gallery" href="/gallery"><h2>Gallery</h2>
+                    <a className="hub-card hub-gallery" onClick={() => navigate("/gallery")}>
+                        <h2>Gallery</h2>
                     </a>
-                    <a className="hub-card hub-letters" href="/letters"><h2>Letters</h2>
+                    <a className="hub-card hub-letters" onClick={() => navigate("/letters")}>
+                        <h2>Letters</h2>
                     </a>
                 </div>
             </div>

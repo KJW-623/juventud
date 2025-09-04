@@ -12,14 +12,12 @@ export default function Intro() {
 
     return (
         <div className="sea-hero" role="main" aria-label="안개 낀 바다 인트로">
-            {/* 상단 네비(미니멀) */}
             <header className="sea-topbar">
                 <nav className="sea-menu">
                     <span className="sea-menu-item is-active">OUR 100 DAYS</span>
                 </nav>
             </header>
 
-            {/* 로고/타이틀 */}
             <div className="sea-logo" aria-label="브랜드">
                 <h1 className="sea-logo-text">Our life began the day we met.</h1>
             </div>
