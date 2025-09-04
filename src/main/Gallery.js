@@ -16,22 +16,22 @@ const PHOTOS = [
     {
         src: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbUT4i1%2FdJMb9NazfYH%2FAAAAAAAAAAAAAAAAAAAAABVfyJ4ujT70O8MJqjtdlY7tTdtvoLwHUY6MdmmtIEQd%2Ftfile.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1759244399%26allow_ip%3D%26allow_referer%3D%26signature%3DzpULpZY0ji0VNcfrPwAWkWBGH9Q%253D",
         title: "Juventud",                // 청춘
-        tags: ["youth", "free", "summer"]
+        tags: ["youth", "summer"]
     },
     {
         src: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdrxS1e%2FdJMb862gNAL%2FAAAAAAAAAAAAAAAAAAAAAGResunCe3WCt6IdEHTBfO-Gtp20jd5vPIGHJRhmO4D7%2Ftfile.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1759244399%26allow_ip%3D%26allow_referer%3D%26signature%3DPKAYXWdLuopC%252BTeFNm7r82QVyek%253D",
         title: "Eterno Verano",           // 영원한 여름
-        tags: ["eterno", "verano", "light"]
+        tags: [ "verano", "light"]
     },
     {
         src: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FY4zCe%2FdJMb9NazfYI%2FAAAAAAAAAAAAAAAAAAAAAKXuIv0sVWufKoJ5aF0yXWPxwwZVkKhiUd6oDjapRZp1%2Ftfile.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1759244399%26allow_ip%3D%26allow_referer%3D%26signature%3D%252BBQ7pC%252BJ65IW0Q4p5OSuHPx6X%252Bo%253D",
         title: "Sea Breeze",              // 바다의 바람
-        tags: ["breeze", "soft", "blue"]
+        tags: [ "soft", "blue"]
     },
     {
         src: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fm0XCG%2FdJMb9NazfYJ%2FAAAAAAAAAAAAAAAAAAAAANQpX5SBJhfH3E7OZ7MIXAsxWw3sAm-w3GXkrGOOFbvy%2Ftfile.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1759244399%26allow_ip%3D%26allow_referer%3D%26signature%3DNLVs9S3W3pYS5r7C8SuRs4ltEcg%253D",
         title: "Coral Dream",             // 산호의 꿈
-        tags: ["coral", "dream", "warm"]
+        tags: ["dream", "warm"]
     },
     {
         src: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F06v6C%2FdJMb862gNAR%2FAAAAAAAAAAAAAAAAAAAAAKVYev0oCFJ1rKqYPihMHETvgOvxN8E17xm9D8BNF5ex%2Ftfile.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1759244399%26allow_ip%3D%26allow_referer%3D%26signature%3DgzJxY5LYHFZdKAFq%252Bhq%252FyIrUKSI%253D",
@@ -41,7 +41,7 @@ const PHOTOS = [
     {
         src: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbLajfJ%2FdJMb862gNA0%2FAAAAAAAAAAAAAAAAAAAAALAuaCIrG72Dre8um3XChivIG2lW03IoS8h6ysyqkgmy%2Ftfile.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1759244399%26allow_ip%3D%26allow_referer%3D%26signature%3D%252FmCfYwo1HS38hRsbSA2Tx%252B0rdFo%253D",
         title: "Cielo Claro",                 // 맑은 하늘
-        tags: ["clear", "sky", "bright"]
+        tags: ["sky", "bright"]
     },
     {
         src: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fsk2No%2FdJMb9NazfYK%2FAAAAAAAAAAAAAAAAAAAAAIXvwfU_oNF16NL-wND3zRsaBN-ovy5WQFXM2dywhsEg%2Ftfile.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1759244399%26allow_ip%3D%26allow_referer%3D%26signature%3DhGz9j9TiBDYInokLD%252FypNTqPiRw%253D",
