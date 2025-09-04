@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Noto+Serif+KR:wght@600;700&display=swap");
+
+/* ===============================
+   Main – Misty Sea Station (clean)
+   =============================== */
+
+/* 배경 */
+.main-hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: "Noto Serif KR", "Nanum Myeongjo", serif;
+    color: #274159;
+    background:
+        radial-gradient(80vmax 50vmax at 20% 10%, rgba(255, 255, 255, .55), transparent 60%),
+        linear-gradient(180deg, #eaf3ff 0%, #f6fbff 40%, #ffffff 68%, #eef8ff 100%);
+}
+
+.main-hero::after {
+    content: "";
+    position: absolute;
+    inset: -5vmax;
+    pointer-events: none;
+    background:
+        radial-gradient(140% 120% at 0% 100%, rgba(255, 255, 255, .55), transparent 60%),
+        radial-gradient(140% 120% at 100% 100%, rgba(255, 255, 255, .55), transparent 60%),
+        radial-gradient(120% 100% at 50% -10%, rgba(255, 255, 255, .7), transparent 60%);
+    filter: blur(14px);
+}
+
+/* 하늘/해/안개 */
+.m-sky {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.m-sun {
+    position: absolute;
+    right: 18%;
+    top: 18%;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%, #ffffff 0%, #f7fbff 55%, #e9f7ff 100%);
+    box-shadow: 0 0 28px rgba(255, 255, 255, .85), 0 0 100px rgba(255, 255, 255, .45);
+}
+
+.m-sun::after {
+    content: "";
+    position: absolute;
+    inset: -36px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, rgba(255, 255, 255, .16), transparent 25%, rgba(255, 255, 255, .16) 50%, transparent 75%, rgba(255, 255, 255, .16));
+    -webkit-mask: radial-gradient(circle, transparent 58%, black 60%);
+    mask: radial-gradient(circle, transparent 58%, black 60%);
+    filter: blur(10px);
+    opacity: .5;
+    animation: spin 40s linear infinite;
+}
+
+.m-fog {
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    background: radial-gradient(80% 60% at 50% 50%, rgba(255, 255, 255, .9), transparent);
+    filter: blur(22px);
+}
+
+.ft {
+    top: -8vh;
+    height: 36vh;
+    opacity: .45;
+}
+
+.fm {
+    top: 22vh;
+    height: 28vh;
+    opacity: .35;
+}
+
+.fb {
+    bottom: -6vh;
+    height: 28vh;
+    opacity: .55;
+    filter: blur(28px);
+}
+
+/* 허브(정거장) */
+.hub {
+    position: absolute;
+    left: 50%;
+    top: 34vh;
+    transform: translateX(-50%);
+    z-index: 3;
+    text-align: center;
+    width: min(92vw, 1040px);
+}
+
+.hub-title {
+    margin: 0;
+    font-family: "Playfair Display", "Noto Serif KR", serif;
+    font-weight: 800;
+    font-size: clamp(26px, 5.4vw, 56px);
+    color: #2d5c8a;
+    text-shadow: 0 1px 0 #fff, 0 18px 30px rgba(41, 93, 130, .12);
+}
+
+.hub-title::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 8px;
+    margin: 12px auto 0;
+    border-radius: 999px;
+    background:
+        radial-gradient(60% 140% at 50% 60%, rgba(255, 255, 255, .9), transparent 70%),
+        linear-gradient(90deg, rgba(158, 198, 236, .55), rgba(99, 173, 220, .7), rgba(158, 198, 236, .55));
+    box-shadow: 0 6px 18px rgba(58, 156, 255, .16);
+}
+
+.hub-sub {
+    margin: 10px 0 22px;
+    color: #45607b;
+}
+
+/* 카드 그리드 */
+.hub-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+/* 반투명 글래스 카드 */
+.hub-card {
+    position: relative;
+    width: 90%;
+    max-width: 520px;
+    min-height: 160px;
+    padding: 13px 12px;
+    border-radius: 24px;
+    margin-top: 5%;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .58), rgba(255, 255, 255, .32));
+    backdrop-filter: blur(12px) saturate(1.08);
+    -webkit-backdrop-filter: blur(12px) saturate(1.08);
+    border: 1px solid rgba(214, 236, 255, .55);
+    box-shadow: 0 32px 64px rgba(37, 79, 120, .12), inset 0 2px 0 rgba(255, 255, 255, .8);
+    display: grid;
+    place-items: center;
+    gap: 8px;
+    color: #2d5c8a;
+    text-decoration: none;
+    transition: transform .18s ease, box-shadow .32s ease, filter .28s ease, background .28s ease;
+}
+
+/* 바닥 글로우 */
+.hub-card::before {
+    content: "";
+    position: absolute;
+    inset: auto 10% -26px 10%;
+    height: 40px;
+    border-radius: 999px;
+    background: radial-gradient(60% 140% at 50% 50%, rgba(140, 190, 255, .35), rgba(140, 190, 255, 0));
+    filter: blur(14px);
+}
+
+/* 그라데이션 보더 */
+.hub-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(168, 208, 255, .7), rgba(255, 255, 255, .2), rgba(168, 208, 255, .7));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: .65;
+    pointer-events: none;
+}
+
+.hub-card:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .38));
+    box-shadow: 0 38px 76px rgba(37, 79, 120, .16), inset 0 2px 0 rgba(255, 255, 255, 1);
+    filter: saturate(1.06);
+}
+
+.hub-card h2 {
+    margin: 0;
+    font-family: "Playfair Display", "Noto Serif KR", serif;
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: .02em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .9);
+}
+
+.hub-card p {
+    margin: 0;
+    color: #597595;
+}
+
+.hub-emoji {
+    font-size: 34px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .75), rgba(255, 255, 255, .55));
+    border: 1px solid rgba(214, 236, 255, .6);
+    box-shadow: 0 10px 22px rgba(58, 156, 255, .14), inset 0 0 0 2px rgba(255, 255, 255, .9);
+    filter: saturate(1.02);
+}
+
+.hub-gallery .hub-emoji {
+    transform: rotate(-6deg);
+}
+
+.hub-letters .hub-emoji {
+    transform: rotate(4deg);
+}
+
+/* 바다/파도 */
+.m-sea {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 56vh;
+    z-index: 2;
+    background:
+        repeating-linear-gradient(-2deg, rgba(255, 255, 255, .18) 0 1px, transparent 1px 12px),
+        linear-gradient(180deg, #cfefff 0%, #b0e8ff 38%, #92def5 64%, #81d6e9 100%);
+    animation: seaShift 22s linear infinite;
+    box-shadow: inset 0 12px 28px rgba(255, 255, 255, .6);
+    backdrop-filter: blur(2px);
+}
+
+.m-sea::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .18;
+    pointer-events: none;
+    background:
+        repeating-linear-gradient(115deg, rgba(255, 255, 255, .9) 0 1px, transparent 1px 18px),
+        repeating-linear-gradient(65deg, rgba(255, 255, 255, .8) 0 1px, transparent 1px 22px);
+    mix-blend-mode: screen;
+    animation: caustics 18s linear infinite;
+}
+
+.m-glow {
+    position: absolute;
+    left: 50%;
+    top: -3vh;
+    transform: translateX(-50%);
+    width: 60vmin;
+    height: 14vmin;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(255, 255, 255, .85), transparent);
+    filter: blur(6px);
+    opacity: .9;
+}
+
+.m-wave {
+    position: absolute;
+    left: -22%;
+    right: -22%;
+    height: 22vh;
+    bottom: -7vh;
+    border-radius: 50%;
+    background: radial-gradient(120% 140% at 50% -30%, rgba(255, 255, 255, .55), transparent),
+        linear-gradient(0deg, rgba(255, 255, 255, .45), rgba(255, 255, 255, .12));
+    filter: blur(1.4px);
+    animation: wave 9s ease-in-out infinite alternate;
+}
+
+.w1 {
+    bottom: -7vh;
+    animation-delay: 0s;
+    opacity: .56;
+}
+
+.w2 {
+    bottom: -3vh;
+    animation-delay: .9s;
+    opacity: .42;
+}
+
+.w3 {
+    bottom: 1vh;
+    animation-delay: 1.8s;
+    opacity: .34;
+}
+
+/* 키프레임 */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes seaShift {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+
+    100% {
+        background-position: 40px 0, 0 0;
+    }
+}
+
+@keyframes caustics {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+
+    100% {
+        background-position: 240px 0, -240px 0;
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(-2%) translateY(0) rotate(-1deg);
+    }
+
+    100% {
+        transform: translateX(2%) translateY(-6px) rotate(1deg);
+    }
+}
+
+/* 반응형 & 모션 최소화 */
+@media (max-width:760px) {
+    .hub {
+        top: 32vh;
+    }
+
+    .hub-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .hub-card {
+        min-height: 140px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .m-sea,
+    .m-wave,
+    .m-sun::after,
+    .hub-card::before {
+        animation: none !important;
+    }
+}
