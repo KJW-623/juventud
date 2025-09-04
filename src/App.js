@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Intro from './intro/Intro';
 import Main from './main/Main';
 import Gallery from './main/Gallery';
@@ -9,7 +9,8 @@ import ErrorPage from './intro/ErrorPage';
 export default function App() {
 
   return (
-      <Routes basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Routes>
         <Route path="/" element={<Intro />} />
 
         <Route path="/main" element={<Main />} />
@@ -18,6 +19,7 @@ export default function App() {
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+    </BrowserRouter>
   );
 };
 
